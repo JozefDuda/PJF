@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="profile.css">
+	<title>Social network</title>
+</head>
+<body>
+
+
+	<div class="pageHeader">
+		<a href="profile.php"><img class="pageLogo" src="defaultpicture.png"></a>
+		<p class="pageName">Social network</p></div>
+
+
+		<div class="stred"><ol>
+			<p>Pohlavie:</p>
+			
+<select id="pohlavie">
+  <option value="Muz">Muz</option>
+  <option value="Zena">Zena</option>
+
+</select>
+  
+  <p>Práca:</p>
+  <input action="profile.php" method="post" type="textarea" name="name">
+  <p>Bydlisko:</p>
+  <input type="textarea" name="">
+
+			<p>Dátum narodenia:</p>
+			<input type="date" name="birthday" max="2004-12-31">
+			<p>Farba:</p>
+			<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+
+			<br><input class="btn" type="button" onclick="alert('Úspešne uložené')" value="Uložiť">
+	</ol>
+</div>
+
+</body>
+</html>

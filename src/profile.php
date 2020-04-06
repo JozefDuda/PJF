@@ -2,7 +2,7 @@
 <html>
 <title>Social network</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="profile.css">
+<link rel="stylesheet" type="text/css" href="styles/profile.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
@@ -10,10 +10,17 @@
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family:'Arial', Helvetica, sans-serif}
 </style>
+
+<?php 
+	require_once('scripts/db_connect.php');
+	session_start();
+	$db = db_connect();
+ ?>
+
 <body class="w3-light-grey">
 
  <div class="pageHeader">
-   <a href=""><img class="pageLogo" src="defaultpicture.png"></a>
+   <a href=""><img class="pageLogo" src="srcPictures/defaultpicture.png"></a>
     <p class="pageName">Social network</p>
     <!--<a href=""><h5 class="btn">Odhlásiť sa</h5></a>-->
 
@@ -32,12 +39,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family:'Arial', Helvetica, sans-serif}
     
       <div class="w3-white w3-text-black w3-card-4">
         <div class="w3-display-container">
-          <a href="defaultpicture.png"><img src="defaultpicture.png" style="width:100%" alt="Avatar">
+          <a href="defaultpicture.png"><img src="srcPictures/defaultpicture.png" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black"></a>
             
           </div>
           <!--<h2>Meno Priezvisko</h2>-->
-         <h2> <?php echo 'swerus' ?></h2>
+          <h2><?php echo "<p class='spacing'>" . $_SESSION['name'] . " " . $_SESSION['surname']. "</p>"; ?></h2>
         </div>
         <div class="w3-container">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-red"></i>Praca</p>
